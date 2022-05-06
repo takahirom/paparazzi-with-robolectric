@@ -3,6 +3,18 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+    }
+
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "app.cash.paparazzi") {
+                useModule("app.cash.paparazzi:paparazzi-gradle-plugin:1.0.0-SNAPSHOT")
+            }
+        }
     }
 }
 dependencyResolutionManagement {
@@ -10,7 +22,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
     }
 }
 rootProject.name = "paparazzi with robolectric"
-include ':app'
+include ':library'
