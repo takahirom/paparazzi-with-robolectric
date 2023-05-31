@@ -7,6 +7,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -14,7 +15,7 @@ import org.junit.runner.RunWith
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 
-@RunWith(AndroidJUnit4::class)
+@RunWith(RobolectricTestRunner::class)
 class ExampleUnitTest {
     @get:Rule
     val paparazzi = Paparazzi()
