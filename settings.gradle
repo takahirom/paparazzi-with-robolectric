@@ -12,7 +12,7 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             if (requested.id.id == "app.cash.paparazzi") {
-                useModule("app.cash.paparazzi:paparazzi-gradle-plugin:1.0.0-SNAPSHOT")
+                useModule("app.cash.paparazzi:paparazzi-gradle-plugin:1.3.0")
             }
         }
     }
